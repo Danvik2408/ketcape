@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+       .wrap{
+         width: 100%;
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+       }
+       .keyBoard{
+        width: 1100px;
+        height: 450px;
+        background-color: #B5B5B5;
+        border-radius: 20px;
+       }
+       .buttonSectionN1{
+        width: 1000px;
+        height: 340px;
+        margin: 10px 50px 50px;
+       }
+       .firstStageButton{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+       }
+       .firstStageButton div{
+        width: 65px;
+        height: 25px;
+        background-color: black;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: monospace;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow:-3px 3px 10px #fff;
+       }
+       .firstStageButton div:last-child{
+        width: 35px;
+        height: 25px;
+       }
+       input{
+        margin-bottom: 50px;
+        width: 1100px;
+        height: 50px;
+        border: 3px solid #B5B5B5;
+        border-radius: 10px;
+       }
+       .SecondStageButton{
+        display: flex;
+        width: 100%;
+        height: 65px;
+        justify-content: space-between;
+       }
+       .SecondStageButton div{
+        width: 60px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: monospace;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow:-3px 3px 10px #fff;
+        background-color: #000;
+       }
+       .SecondStageButton div:last-child{
+        width: 85px;
+       }
+       .ThirdStageButton{
+        width: 100%;
+        height: 65px;
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+       }
+       .ThirdStageButton div{
+        width: 60px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: monospace;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow:-3px 3px 10px #fff;
+        background-color: #000;
+       }
+       .ThirdStageButton div:first-child{
+        justify-content: start;
+        width: 80px;
+        padding: 15px;
+        align-items: flex-end;
+       }
+       .ThirdStageButton div:last-child{
+        justify-content:end;
+        padding: 15px;
+        align-items: flex-end;
+       }
+       .FourthStageButton{
+        width: 100%;
+        height: 65px;
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+       }
+       .FourthStageButton div{
+        width: 60px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: monospace;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow:-3px 3px 10px #fff;
+        background-color: #000;
+       }
+       .FourthStageButton div:first-child{
+        justify-content: start;
+        width: 100px;
+        padding: 15px;
+        align-items: flex-end;
+       }
+       .FourthStageButton div:last-child{
+        justify-content:end;
+        padding: 15px;
+        width: 40px;
+        align-items: flex-end;
+        margin-top: -12px;
+        height: 77px;
+        box-shadow: -3px 5px 5px #fff;
+       }
+       .SixthStageButton{
+        width: 100%;
+        height: 65px;
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+       }
+       .SixthStageButton div{
+        width: 60px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: monospace;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow:-3px 3px 10px #fff;
+        background-color: #000;
+       }
+       .SixthStageButton div:first-child{
+        justify-content: start;
+        width: 140px;
+        padding: 15px;
+        align-items: flex-end;
+       }
+       .SixthStageButton div:last-child{
+        justify-content: flex-end;
+        width: 140px;
+        padding: 15px;
+        align-items: flex-end;
+       }
+       .SeventhStageButton{
+        width: 100%;
+        height: 65px;
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+       }
+       .SeventhStageButton div{
+        width: 60px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: monospace;
+        font-weight: 500;
+        border-radius: 5px;
+        box-shadow:-3px 3px 10px #fff;
+        background-color: #000;
+       }
+       .SeventhStageButton .space{
+        width: 350px;
+       }
+       .SeventhStageButton .MiniControl{
+        width: 200px;
+        background-color: transparent;
+        box-shadow: none;
+        
+       }
+       .MiniControl .updown{
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        height: 65px;
+        margin: 10px;
+
+       }
+    </style>
+</head>
+<body>
+
+    <div class="wrap" id="wrap">
+
+        <input type="text" id="msg">
+
+        <div class="keyBoard">
+
+
+            <div class="buttonSectionN1">
+
+                    <div class="firstStageButton">
+                        <div id="esc">Esc</div>
+                        <div id="f1">F1</div>
+                        <div id="f2">F2</div>
+                        <div id="f3">F3</div>
+                        <div id="f4">F4</div>
+                        <div id="f5">F5</div>
+                        <div id="f6">F6</div>
+                        <div id="f7">F7</div>
+                        <div id="f8">F8</div>
+                        <div id="f9">F9</div>
+                        <div id="f10">F10</div>
+                        <div id="f11">F11</div>
+                        <div id="f12">F12</div>
+                        <div></div>
+                    </div>
+                    <div class="SecondStageButton">
+                        <div id="slesh">\</div>
+                        <div id="one">1</div>
+                        <div id="two">2</div>
+                        <div id="three">3</div>
+                        <div id="four">4</div>
+                        <div id="fifth">5</div>
+                        <div id="sixth">6</div>
+                        <div id="seven">7</div>
+                        <div id="eigth">8</div>
+                        <div id="nine">9</div>
+                        <div id="zero">0</div>
+                        <div id="minuc">-</div>
+                        <div id="rivne">=</div>
+                        <div id="backspace"><img src="./Group 2.png" alt=""></div>
+                   </div>
+                   <div class="ThirdStageButton">
+                    <div id="tab"><img src="./Group 3.png" alt=""></div>
+                    <div id="q">Й</div>
+                    <div id="w">Ц</div>
+                    <div id="e">У</div>
+                    <div id="r">К</div>
+                    <div id="t">Е</div>
+                    <div id="y">Н</div>
+                    <div id="u">Г</div>
+                    <div id="i">Ш</div>
+                    <div id="o">Щ</div>
+                    <div id="p">З</div>
+                    <div id="x">Х</div>
+                    <div id="iu">Ї</div>
+                    <div><img src="./Group 4.png" alt=""></div>
+               </div>
+               <div class="FourthStageButton">
+                <div id="capslock"><img id="notActive" src="./Group 6 (1).png" alt=""></div>
+                <div id="a">ф</div>
+                <div id="s">і</div>
+                <div id="d">в</div>
+                <div id="f">а</div>
+                <div id="g">п</div>
+                <div id="h">р</div>
+                <div id="j">о</div>
+                <div id="k">л</div>
+                <div id="l">д</div>
+                <div id="jj">ж</div>
+                <div id="ee">є</div>
+                <div id="apf">'</div>
+                <div id="enter"></div>
+           </div>
+           <div class="SixthStageButton">
+            <div id="shift"><img src="./Group 5.png" alt=""></div>
+            <div id="z">я</div>
+            <div id="xN2">ч</div>
+            <div id="c">с</div>
+            <div id="v">м</div>
+            <div id="b">и</div>
+            <div id="n">т</div>
+            <div id="m">ь</div>
+            <div id="Be">б</div>
+            <div id="Uy">ю</div>
+            <div id="krap">.</div>
+            <div id="shift"><img src="./Group 5.png" alt=""></div>
+       </div>
+       <div class="SeventhStageButton">
+        <div id="ctrl">Ctrl</div>
+        <div id="windows"><img src="./Group 7.png" alt=""></div>
+        <div id="alt">Alt</div>
+        <div id="space" class="space"></div>
+        <div id="alt2">Alt</div>
+        <div id="Fn">Fn</div>
+        <div id="ctrl2">Ctrl</div>
+        <div class="MiniControl">
+        <div id="left"><img src="./Group 10.png" alt=""></div>
+        <div class="updown">
+            <div id="up"><img src="./Group 8.png" alt=""></div>
+            <div id="down"><img src="./Group 9.png" alt=""></div>
+        </div>
+        <div id="rigth"><img src="./Group 11.png" alt=""></div>
+
+        </div>
+
+   </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+       let txt = '';
+
+      document.body.onkeydown = function(e){
+        if(e.keyCode == 49){
+            txt += '1'
+            msg.value = txt
+        } else if(e.keyCode == 50){
+            txt += '2'
+            msg.value = txt
+        }else if(e.keyCode == 51){
+            txt += '3'
+            msg.value = txt
+        }else if(e.keyCode == 52){
+            txt += '4'
+            msg.value = txt
+        }else if(e.keyCode == 53){
+            txt += '5'
+            msg.value = txt
+        }else if(e.keyCode == 54){
+            txt += '6'
+            msg.value = txt
+        }else if(e.keyCode == 55){
+            txt += '7'
+            msg.value = txt
+        }else if(e.keyCode == 56){
+            txt += '8'
+            msg.value = txt
+        }else if(e.keyCode == 57){
+            txt += '9'
+            msg.value = txt
+        }else if(e.keyCode == 48){
+            txt += '0'
+            msg.value = txt
+        }else if(e.keyCode == 192){
+            txt += "`"
+            msg.value = txt
+        }else if(e.keyCode == 189){
+            txt += '-'
+            msg.value = txt
+        }else if(e.keyCode == 187){
+            txt += '='
+            msg.value = txt
+        }else if(e.keyCode == 81){
+            txt += 'й'
+            msg.value = txt
+        }else if(e.keyCode == 87){
+            txt += 'ц'
+            msg.value = txt
+        }else if(e.keyCode == 69){
+            txt += 'у'
+            msg.value = txt
+        }else if(e.keyCode == 82){
+            txt += 'к'
+            msg.value = txt
+        }else if(e.keyCode == 84){
+            txt += 'е'
+            msg.value = txt
+        }else if(e.keyCode == 89){
+            txt += 'н'
+            msg.value = txt
+        }else if(e.keyCode == 85){
+            txt += 'г'
+            msg.value = txt
+        }else if(e.keyCode == 8){
+            txt = ''
+            msg.value = txt
+        }else if(e.keyCode == 73){
+            txt += 'щ'
+            msg.value = txt
+        }else if(e.keyCode == 79){
+            txt += 'щ'
+            msg.value = txt
+        }else if(e.keyCode == 80){
+            txt += 'з'
+            msg.value = txt
+        }else if(e.keyCode == 219){
+            txt += 'х'
+            msg.value = txt
+        }else if(e.keyCode == 221){
+            txt += 'ї'
+            msg.value = txt
+        }else if(e.keyCode == 65){
+            txt += 'ф'
+            msg.value = txt
+        }else if(e.keyCode == 83){
+            txt += 'і'
+            msg.value = txt
+        }else if(e.keyCode == 68){
+            txt += 'в'
+            msg.value = txt
+        }else if(e.keyCode == 70){
+            txt += 'а'
+            msg.value = txt
+        }else if(e.keyCode == 71){
+            txt += 'п'
+            msg.value = txt
+        }else if(e.keyCode == 72){
+            txt += 'р'
+            msg.value = txt
+        }else if(e.keyCode == 74){
+            txt += 'о'
+            msg.value = txt
+        }else if(e.keyCode == 75){
+            txt += 'л'
+            msg.value = txt
+        }else if(e.keyCode == 76){
+            txt += 'д'
+            msg.value = txt
+        }else if(e.keyCode == 186){
+            txt += 'ж'
+            msg.value = txt
+        }else if(e.keyCode == 222){
+            txt += 'є'
+            msg.value = txt
+        }else if(e.keyCode == 9){
+            txt += ''
+            msg.value = txt
+        }else if(e.keyCode == 90){
+            txt += 'я'
+            msg.value = txt
+        }else if(e.keyCode == 88){
+            txt += 'ч'
+            msg.value = txt
+        }else if(e.keyCode == 67){
+            txt += 'с'
+            msg.value = txt
+        }else if(e.keyCode == 86){
+            txt += 'м'
+            msg.value = txt
+        }else if(e.keyCode == 68){
+            txt += 'и'
+            msg.value = txt
+        }else if(e.keyCode == 78){
+            txt += 'т'
+            msg.value = txt
+        }else if(e.keyCode == 77){
+            txt += 'ь'
+            msg.value = txt
+        }else if(e.keyCode == 188){
+            txt += 'б'
+            msg.value = txt
+        }else if(e.keyCode == 190){
+            txt += 'ю'
+            msg.value = txt
+        }else if(e.keyCode == 191){
+            txt += '.'
+            msg.value = txt
+        }else if(e.keyCode == 32){
+            txt += ' '
+            msg.value = txt
+        }
+        if(e.keyCode == 16 && e.keyCode == 18){          
+         if(e.keyCode == 81){
+            txt += 'q'
+            msg.value = txt
+        }else if(e.keyCode == 87){
+            txt += 'w'
+            msg.value = txt
+        }else if(e.keyCode == 69){
+            txt += 'e'
+            msg.value = txt
+        }else if(e.keyCode == 82){
+            txt += 'r'
+            msg.value = txt
+        }else if(e.keyCode == 84){
+            txt += 't'
+            msg.value = txt
+        }else if(e.keyCode == 89){
+            txt += 'y'
+            msg.value = txt
+        }else if(e.keyCode == 85){
+            txt += 'u'
+            msg.value = txt
+        }else if(e.keyCode == 8){
+            txt = ''
+            msg.value = txt
+        }else if(e.keyCode == 73){
+            txt += 'i'
+            msg.value = txt
+        }else if(e.keyCode == 79){
+            txt += 'o'
+            msg.value = txt
+        }else if(e.keyCode == 80){
+            txt += 'p'
+            msg.value = txt
+        }else if(e.keyCode == 219){
+            txt += '['
+            msg.value = txt
+        }else if(e.keyCode == 221){
+            txt += ']'
+            msg.value = txt
+        }else if(e.keyCode == 65){
+            txt += 'a'
+            msg.value = txt
+        }else if(e.keyCode == 83){
+            txt += 's'
+            msg.value = txt
+        }else if(e.keyCode == 68){
+            txt += 'd'
+            msg.value = txt
+        }else if(e.keyCode == 70){
+            txt += 'f'
+            msg.value = txt
+        }else if(e.keyCode == 71){
+            txt += 'g'
+            msg.value = txt
+        }else if(e.keyCode == 72){
+            txt += 'h'
+            msg.value = txt
+        }else if(e.keyCode == 74){
+            txt += 'j'
+            msg.value = txt
+        }else if(e.keyCode == 75){
+            txt += 'k'
+            msg.value = txt
+        }else if(e.keyCode == 76){
+            txt += 'l'
+            msg.value = txt
+        }else if(e.keyCode == 186){
+            txt += ';'
+            msg.value = txt
+        }else if(e.keyCode == 222){
+            txt += "'"
+            msg.value = txt
+        }else if(e.keyCode == 9){
+            txt += ''
+            msg.value = txt
+        }else if(e.keyCode == 90){
+            txt += 'z'
+            msg.value = txt
+        }else if(e.keyCode == 88){
+            txt += 'x'
+            msg.value = txt
+        }else if(e.keyCode == 67){
+            txt += 'c'
+            msg.value = txt
+        }else if(e.keyCode == 86){
+            txt += 'v'
+            msg.value = txt
+        }else if(e.keyCode == 68){
+            txt += 'b'
+            msg.value = txt
+        }else if(e.keyCode == 78){
+            txt += 'n'
+            msg.value = txt
+        }else if(e.keyCode == 77){
+            txt += 'm'
+            msg.value = txt
+        }else if(e.keyCode == 188){
+            txt += ','
+            msg.value = txt
+        }else if(e.keyCode == 190){
+            txt += '.'
+            msg.value = txt
+        } 
+        }
+        
+        console.log(e.keyCode)
+      }
+
+      
+
+
+
+
+    </script>
+    
+</body>
+</html>
